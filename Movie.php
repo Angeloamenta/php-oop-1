@@ -118,8 +118,14 @@ class Movie
     public function setVote($vote)
     {
         $this->vote = $vote;
+            if ($this->vote >= 3) {
+                 $this->vote = "Sopra la media";
+            }else {
+                $this->vote ="Sotto la media";
+            }
 
         return $this;
+        
     }
 
     /**
@@ -146,9 +152,33 @@ class Movie
 }
 
 $movie = new Movie ('A Knight\'s Tale', 'Brian Helgeland', 2001);
-echo $movie->getTitle();
-echo $movie->getAuthor();
-echo $movie->getRelaseYear();
-var_dump($movie);
+
+// echo $movie->getTitle();
+// echo $movie->getAuthor();
+// echo $movie->getRelaseYear();
+// var_dump($movie);
 $movie->setGenres('avventura');
+// echo $movie->getGenres();
+$movie->setVote(3);
 var_dump($movie);
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Titolo film :</h2>
+    <h4><?php echo $movie->getTitle() ?></h4>
+    <h2>Regista film :</h2>
+    <h4><?php echo $movie->getAuthor() ?></h4>
+    <h2>Genere film :</h2>
+    <h4><?php echo $movie->getGenres() ?></h4>
+    <h2>Voto film :</h2>
+    <h4><?php echo $movie->getVote() ?></h4>
+</body>
+</html>
