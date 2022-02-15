@@ -150,3 +150,5 @@ echo $movie->getTitle();
 echo $movie->getAuthor();
 echo $movie->getRelaseYear();
 var_dump($movie);
+$movie->setGenres('avventura');
+var_dump($movie);
