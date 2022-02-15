@@ -11,8 +11,134 @@ class Movie
     public $title;
     public $genres;
     public $author;
-    public $relaseYear;
+    public $releaseYear;
     public $vote;
     public $languages;
 
+
+    function __construct($_title, $_author, $_releaseYear) {
+        $this->title = $_title;
+        $this->author = $_author;
+        $this->relaseYear = $_releaseYear;
+    }
+
+    /**
+     * Get the value of title
+     */ 
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * Set the value of title
+     *
+     * @return  self
+     */ 
+    public function setTitle($title)
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of genres
+     */ 
+    public function getGenres()
+    {
+        return $this->genres;
+    }
+
+    /**
+     * Set the value of genres
+     *
+     * @return  self
+     */ 
+    public function setGenres($genres)
+    {
+        $this->genres = $genres;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of author
+     */ 
+    public function getAuthor()
+    {
+        return $this->author;
+    }
+
+    /**
+     * Set the value of author
+     *
+     * @return  self
+     */ 
+    public function setAuthor($author)
+    {
+        $this->author = $author;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of relaseYear
+     */ 
+    public function getRelaseYear()
+    {
+        return $this->relaseYear;
+    }
+
+    /**
+     * Set the value of relaseYear
+     *
+     * @return  self
+     */ 
+    public function setRelaseYear($relaseYear)
+    {
+        $this->relaseYear = $relaseYear;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of vote
+     */ 
+    public function getVote()
+    {
+        return $this->vote;
+    }
+
+    /**
+     * Set the value of vote
+     *
+     * @return  self
+     */ 
+    public function setVote($vote)
+    {
+        $this->vote = $vote;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of languages
+     */ 
+    public function getLanguages()
+    {
+        return $this->languages;
+    }
+
+    /**
+     * Set the value of languages
+     *
+     * @return  self
+     */ 
+    public function setLanguages($languages)
+    {
+        $this->languages = $languages;
+
+        return $this;
+    }
 }
