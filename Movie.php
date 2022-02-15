@@ -141,4 +141,12 @@ class Movie
 
         return $this;
     }
+
+
 }
+
+$movie = new Movie ('A Knight\'s Tale', 'Brian Helgeland', 2001);
+echo $movie->getTitle();
+echo $movie->getAuthor();
+echo $movie->getRelaseYear();
+var_dump($movie);
